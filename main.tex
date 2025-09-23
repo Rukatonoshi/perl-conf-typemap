@@ -146,11 +146,27 @@
 \end{frame}
 
 \begin{frame}[fragile]{Что такое typemap [1]}
-    \begin{itemize}
-        \setlength\itemsep{1em}
-        \item Описывает как осуществлять преобразования между Perl-типами/C-типами и обратно
-        \item Состоит из трёх секций: TYPEMAP, INPUT и OUTPUT
-    \end{itemize}
+    \inputcode{XStypemap}{snippets/typemap-basic-typemap}
+
+    \onslide<2->{
+        \vspace{0.25cm}
+        \inputcode{XStypemap}{snippets/typemap-basic-input}
+    }
+
+    \onslide<3->{
+        \vspace{0.25cm}
+        \inputcode{XStypemap}{snippets/typemap-basic-output}
+    }
+
+%    \onslide<4->{
+%        \vspace{0.1cm}
+%        \footnotesize
+%        \$var - имя входной или выходной переменной
+%
+%        \$type - исходный C тип параметра (Foo::Bar -> Foo\_Bar)
+%
+%        \$arg - ячейка стека, для чтения/записи
+%    }
 \end{frame}
 
 \begin{frame}[fragile]{Что такое typemap [2]}
@@ -192,6 +208,10 @@
         \vspace{0.5cm}
         \inputcode{txt}{snippets/out-5.txt}
     }
+\end{frame}
+
+\begin{frame}[fragile]{Как это выглядит в Си}
+    \inputcode{C}{snippets/xs-5.c}
 \end{frame}
 
 \begin{frame}[fragile]{А теперь без хардкода}
