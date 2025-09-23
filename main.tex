@@ -9,9 +9,9 @@
 \begin{frame}[fragile]{О чём расскажу}
     \begin{enumerate}
         \item Кто я
+        \item XS в двух словах
         \item Как переводится название доклада
         \item Подопытная библиотека
-        \item XS в двух словах
         \item В чём вообще проблема
         \item Способы передачи структур в XS
         \item Передача структур из XS в Perl
@@ -27,26 +27,9 @@
     \end{itemize}
 }
 
-\begin{frame}[fragile]{Как переводится название доклада}
-    \centering
-    \hspace{0.5cm}
-    \includegraphics[height=\textheight]{snippets/xs-compilation-scheme.png}
-\end{frame}
-
-\begin{frame}[fragile]{Подопытная библиотека libfoo}
-    \inputcode{C}{snippets/foo-simple.c}
-    \par\vspace{0.5cm}
-    \inputcode{C}{snippets/foo-simple.h}
-\end{frame}
-
-\begin{frame}[fragile]{Вызов libfoo из Си}
-    \inputcode{C}{snippets/bar-simple.c}
-    \par\vspace{0.5cm}
-    \inputcode{txt}{snippets/bar-output.txt}
-\end{frame}
-
 \begin{frame}[fragile]{Что почитать про XS}
     \begin{itemize}
+        \setlength\itemsep{1em}
         \item \texttt{perlxstut}
         \item \texttt{perlxs}
         \item \texttt{perlguts}
@@ -70,6 +53,28 @@
 
 \begin{frame}[fragile]{Mytest.xs}
     \inputcode{XS}{snippets/Mytest.xs}
+\end{frame}
+
+\begin{frame}[fragile]{Makefile.PL}
+    \inputcode{Perl}{snippets/Makefile.PL}
+\end{frame}
+
+\begin{frame}[fragile]{Как переводится название доклада}
+    \centering
+    \hspace{0.5cm}
+    \includegraphics[height=\textheight]{snippets/xs-compilation-scheme.png}
+\end{frame}
+
+\begin{frame}[fragile]{Подопытная библиотека libfoo}
+    \inputcode{C}{snippets/foo-simple.c}
+    \par\vspace{0.5cm}
+    \inputcode{C}{snippets/foo-simple.h}
+\end{frame}
+
+\begin{frame}[fragile]{Вызов libfoo из Си}
+    \inputcode{C}{snippets/bar-simple.c}
+    \par\vspace{0.5cm}
+    \inputcode{txt}{snippets/bar-output.txt}
 \end{frame}
 
 \begin{frame}[fragile]{Вызов libfoo из XS}
@@ -223,7 +228,7 @@
 \end{frame}
 
 \begin{frame}[fragile]{Выводы}
-    В простом случае можно описывать код в функциях на Си и использовать T\_PACKED\\
+    В простом случае можно описывать код в функциях на Си и использовать T\_PACKED\textcolor{gray}{\_PATCHED}
     => компилятор сделает работу за вас :)
     \vspace{0.5cm}
 
