@@ -1,5 +1,5 @@
-XS_EUPXS(XS_xs_foo); /* prototype to pass -Wmissing-prototypes */
-XS_EUPXS(XS_xs_foo)
+XS_EUPXS(XS_Mytest_foo); /* prototype to pass -Wmissing-prototypes */
+XS_EUPXS(XS_Mytest_foo)
 {
     dVAR; dXSARGS;
     if (items != 1)
