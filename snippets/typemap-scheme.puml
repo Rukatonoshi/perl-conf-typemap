@@ -21,7 +21,7 @@ participant "Perl Values" as PerlVals
 
 CParams -> TypemapIn : Perl arg → C value
 TypemapIn -> XSCode : pass C value
-XSCode -> TypemapOut : return C result
+XSCode -> TypemapOut : return C value
 TypemapOut -> PerlVals : C value → Perl value
 
 @enduml

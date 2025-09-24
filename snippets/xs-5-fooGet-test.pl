@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 use ExtUtils::testlib;
-use xs;
+use Mytest;
 
 use Data::Dumper;
-warn Dumper xs::fooGet();
+warn Dumper Mytest::fooGet();
